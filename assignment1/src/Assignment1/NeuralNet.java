@@ -50,9 +50,6 @@ public class NeuralNet implements NeuralNetInterface {
 		this.argA = argA;
 		this.argB = argB;
 		
-		//this.initializeTrainingSet();
-
-
 	}
      
      public void buildLayers() {
@@ -123,7 +120,6 @@ public class NeuralNet implements NeuralNetInterface {
      }
      
      public double[] outputFor(double [] x) {
- 		//setInputData(X);
     	// System.out.println(Arrays.deepToString(X));
 		 //System.out.println(Arrays.toString(x));
     	 for(int i=0; i< inputLayer.size(); i++) {
@@ -152,7 +148,6 @@ public class NeuralNet implements NeuralNetInterface {
      }
      
      public void backwardPropagate(double output[]) {
-    	//int i = 0;              //?
  		for(Neuron n : outputLayer) {
  			double y = n.getNeuronout();
  			double z = output[0];
@@ -168,7 +163,6 @@ public class NeuralNet implements NeuralNetInterface {
  				e.setDelta(delta);
  				e.setWeight(newWeight);			
  			}
- 			//i++;
  		}
  		//System.out.println("hey");
  		for(Neuron n: hiddenLayer) {   //different way to calculate error for nodes in hidden layer
