@@ -1,2 +1,2 @@
-# cpen-502
+# cpen-502 assignment
  Build a neural net using java.
